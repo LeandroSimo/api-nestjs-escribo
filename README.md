@@ -22,10 +22,6 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
-
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
-
 ## Installation
 
 ```bash
@@ -45,6 +41,40 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
+## API ROUTES
+
+```bash
+# SIGNUP - POST METHOD
+$ https://api-nestjs-escribo-production.up.railway.app/auth/signup
+
+#BODY
+Exemplo:
+
+{
+    "name": "Usuário",
+    "email": "teste@teste.com",
+    "password": "teste123",
+    "phones": [{ "number": "123456789", "ddd": "18" }]
+}
+
+PS.: Os dados do usuário acima é um exemplo de como deve ser enviada as informações no body, altere os dados e cadastre outros usuários.
+
+
+# SIGNIN - POST METHOD
+$ https://api-nestjs-escribo-production.up.railway.app/auth/signin
+
+#BODY
+Exemplo:
+
+{
+    "email": "teste@teste.com",
+    "password": "teste123",
+}
+
+PS.: Para efetuar o login com sucesso, lembre-se de passar o "Bearer Token" que será retornado da rota "SignUp".
+
+```
+
 ## Test
 
 ```bash
@@ -57,16 +87,6 @@ $ npm run test:e2e
 # test coverage
 $ npm run test:cov
 ```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
 
 ## License
 
